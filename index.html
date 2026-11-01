@@ -17,7 +17,7 @@
       </div>
       <div class="brand-description">
         <h1>踏霞之歌</h1>
-        <p>THE CHANT OF LAVENX</p>
+        <p>The Chant of Lavenx</p>
       </div>
       <div class="header-meta" aria-hidden="true">
         <span>作者 · 花椒海鲫鱼|弦上炎舞</span>
@@ -32,26 +32,25 @@
         <p class="sidebar-heading">导航</p>
         <nav class="main-nav" aria-label="主导航">
           <button type="button" class="nav-link active" data-page="home">主页</button>
+          <button type="button" class="nav-link" data-page="lore">世界设定</button>
           <button type="button" class="nav-link" data-page="characters">角色档案</button>
-          <button type="button" class="nav-link" data-page="world">世界与地区</button>
-          <button type="button" class="nav-link" data-page="documents">记录与文献</button>
+          <button type="button" class="nav-link" data-page="world">国家与地区</button>
+          <button type="button" class="nav-link" data-page="documents">故事集</button>
         </nav>
       </div>
       <div class="sidebar-group">
         <p class="sidebar-heading">档案馆</p>
         <p class="sidebar-copy">人物、地理、历史与故事文献将逐步归档于此。</p>
       </div>
-      <div class="sidebar-footnote">
-        <span class="sidebar-status"><span class="status-dot" aria-hidden="true"></span>资料库 / 已连接</span>
-        <span>76SN · VERSION 0.2</span>
-      </div>
     </aside>
 
     <main class="main-content" id="main-content">
       <section class="page" id="page-home" aria-labelledby="home-title">
-        <div class="breadcrumbs">档案首页 <span>/</span> 总览</div>
+        <div class="breadcrumbs">档案首页 <span>/</span> 主页</div>
         <div class="home-intro">
-          <p class="overline">76SN Archive</p>
+          <p class="overline">
+  <span class="gradient-76sn">76SN</span> Archive
+</p>
           <h2 id="home-title">踏霞之歌</h2>
           <p class="home-subtitle">The Chant of Lavenx</p>
           <div class="title-rule" aria-hidden="true"></div>
@@ -59,15 +58,24 @@
         </div>
 
         <section class="notice" aria-labelledby="notice-title">
-          <h3 id="notice-title">站点公告 <span>NOTICE</span></h3>
+          <h3 id="notice-title">每日公告 <span>NOTICE</span></h3>
           <p>作者花椒油是网站制作新手！关于76SN踏霞之歌的设定故事还在完成过程中，会一直持续更新的！谢谢大家来光顾！</p>
-          <p>This website is made by Euphelia (Tarraleah Lavenx) together with ChatGPT. We are still improving the contents inside. Thank you guys for coming here to play and enjoy!</p>
+          <p>This website is made by Euphelia (Tarraleah Lavenx) together with ChatGPT. We are still improving the contents inside. Hope you guys have fun here!</p>
         </section>
-
-        <div class="section-heading">
-          <h3>档案分类</h3>
-          <span>ARCHIVE DIRECTORY</span>
-        </div>
+<div class="home-search">
+  <label class="search-label" for="home-search">
+    全站档案检索 · ARCHIVE SEARCH
+  </label>
+  <input
+    id="home-search"
+    class="search-input"
+    type="search"
+    placeholder="搜索角色、地区、文献或关键词..."
+    autocomplete="off"
+  >
+</div>
+<div id="home-search-panel" hidden>
+ 
         <div class="overview-list">
           <button class="overview-card" type="button" data-page="characters">
             <span class="overview-number">01</span><span class="overview-copy"><strong>角色档案</strong><small>人物、身份及背景资料</small></span><span class="overview-arrow" aria-hidden="true">→</span>
@@ -89,7 +97,18 @@
           <p>档案目录。选择条目以查看简要资料。</p>
         </div>
         <label class="search-label" for="character-search">档案检索</label>
-        <input id="character-search" class="search-input" type="search" placeholder="输入角色名称或编号，例如 SW-026" autocomplete="off">
+        <input id="character-search" class="search-input" type="search" placeholder="输入角色名称或编号，例如 赛普轮塔" autocomplete="off">
+        
+<label for="character-sort" class="sort-label">
+  Sort by / 排序方式
+</label>
+
+<select id="character-sort" class="sort-select">
+  <option value="default">Default · 原始顺序</option>
+  <option value="az">Alphabetical · A–Z</option>
+  <option value="za">Alphabetical · Z–A</option>
+</select>
+
         <div class="record-list" id="characters-list"></div>
       </section>
 
@@ -104,14 +123,46 @@
       </section>
 
       <section class="page" id="page-documents" aria-labelledby="documents-title" hidden>
-        <div class="breadcrumbs">档案首页 <span>/</span> 记录与文献</div>
+        <div class="breadcrumbs">档案首页 <span>/</span> 故事集</div>
         <div class="page-heading">
           <p class="overline">ARCHIVED DOCUMENTS</p>
-          <h2 id="documents-title">记录与文献</h2>
+          <h2 id="documents-title">故事集</h2>
           <p>故事、历史记录及其他文献的占位目录。</p>
         </div>
         <div class="record-list" id="documents-list"></div>
       </section>
+
+<!-- 设定集主目录 -->
+
+<section
+  class="page"
+  id="page-lore"
+  aria-labelledby="lore-title"
+  hidden
+>
+
+  <div class="breadcrumbs">
+    档案首页 <span>/</span> 世界设定
+  </div>
+
+  <div class="page-heading">
+    <p class="overline">SETTINGS</p>
+    <h2 id="lore-title">世界设定</h2>
+    <p>《踏霞之歌》世界观设定文献总目录。</p>
+  </div>
+
+  <div class="lore-list">
+<a class="lore-entry" href="settings/basic-setting.html">
+  <span class="lore-number">01</span>
+  <div>
+    <strong>踏霞基础设定</strong>
+    <small>BASIC WORLD SETTINGS</small>
+  </div>
+  <span class="lore-arrow">↗</span>
+</a>
+  </div>
+
+</section>
 
       <section class="page" id="page-article" aria-labelledby="article-title" hidden>
         <div class="breadcrumbs">档案首页 <span>/</span> <span id="article-path">档案条目</span></div>
@@ -121,7 +172,6 @@
           <h2 id="article-title"></h2>
           <p class="article-id" id="article-id"></p>
         </div>
-        <div class="article-meta"><span>档案状态</span><strong>待完善 / DRAFT</strong></div>
         <h3 class="article-section-title">概述</h3>
         <p class="article-paragraph" id="article-summary"></p>
         <h3 class="article-section-title">详细资料</h3>
@@ -129,6 +179,6 @@
       </section>
     </main>
   </div>
-  <footer class="footer"><span>76SN · THE CHANT OF LAVENX</span><span>世界观档案站 / 版本 0.2</span></footer>
+  <footer class="footer"><span>76SN - THE CHANT OF LAVENX</span><span>原创设定，禁止盗用，违者必究</span></footer>
 </body>
 </html>
