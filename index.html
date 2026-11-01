@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0c10">
+  <meta name="description" content="76SN《踏霞之歌》世界观档案网站。">
+  <title>76SN踏霞之歌</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand" aria-label="76SN">
+        <span class="brand-name">76SN</span>
+      </div>
+      <div class="brand-description">
+        <h1>踏霞之歌</h1>
+        <p>THE CHANT OF LAVENX</p>
+      </div>
+      <div class="header-meta" aria-hidden="true">
+        <span>作者 · 花椒海鲫鱼|弦上炎舞</span>
+        <span>Created by Euphelia</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="site-layout">
+    <aside class="sidebar" aria-label="网站侧边导航">
+      <div class="sidebar-group">
+        <p class="sidebar-heading">导航</p>
+        <nav class="main-nav" aria-label="主导航">
+          <button type="button" class="nav-link active" data-page="home">主页</button>
+          <button type="button" class="nav-link" data-page="characters">角色档案</button>
+          <button type="button" class="nav-link" data-page="world">世界与地区</button>
+          <button type="button" class="nav-link" data-page="documents">记录与文献</button>
+        </nav>
+      </div>
+      <div class="sidebar-group">
+        <p class="sidebar-heading">档案馆</p>
+        <p class="sidebar-copy">人物、地理、历史与故事文献将逐步归档于此。</p>
+      </div>
+      <div class="sidebar-footnote">
+        <span class="sidebar-status"><span class="status-dot" aria-hidden="true"></span>资料库 / 已连接</span>
+        <span>76SN · VERSION 0.2</span>
+      </div>
+    </aside>
+
+    <main class="main-content" id="main-content">
+      <section class="page" id="page-home" aria-labelledby="home-title">
+        <div class="breadcrumbs">档案首页 <span>/</span> 总览</div>
+        <div class="home-intro">
+          <p class="overline">76SN Archive</p>
+          <h2 id="home-title">踏霞之歌</h2>
+          <p class="home-subtitle">The Chant of Lavenx</p>
+          <div class="title-rule" aria-hidden="true"></div>
+          <p class="home-description">欢迎来到花椒油の76SN踏霞之歌世界观设定网站~</p>
+        </div>
+
+        <section class="notice" aria-labelledby="notice-title">
+          <h3 id="notice-title">站点公告 <span>NOTICE</span></h3>
+          <p>本网站目前处于搭建阶段。展示的简介和编号中标注“暂定”的条目均为占位内容，并非正式设定。</p>
+        </section>
+
+        <div class="section-heading">
+          <h3>档案分类</h3>
+          <span>ARCHIVE DIRECTORY</span>
+        </div>
+        <div class="overview-list">
+          <button class="overview-card" type="button" data-page="characters">
+            <span class="overview-number">01</span><span class="overview-copy"><strong>角色档案</strong><small>人物、身份及背景资料</small></span><span class="overview-arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="overview-card" type="button" data-page="world">
+            <span class="overview-number">02</span><span class="overview-copy"><strong>世界与地区</strong><small>国家、地区与地理资料</small></span><span class="overview-arrow" aria-hidden="true">→</span>
+          </button>
+          <button class="overview-card" type="button" data-page="documents">
+            <span class="overview-number">03</span><span class="overview-copy"><strong>记录与文献</strong><small>历史记录、故事及文献</small></span><span class="overview-arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="page" id="page-characters" aria-labelledby="characters-title" hidden>
+        <div class="breadcrumbs">档案首页 <span>/</span> 角色档案</div>
+        <div class="page-heading">
+          <p class="overline">CHARACTER ARCHIVE</p>
+          <h2 id="characters-title">角色档案</h2>
+          <p>档案目录。选择条目以查看简要资料。</p>
+        </div>
+        <label class="search-label" for="character-search">档案检索</label>
+        <input id="character-search" class="search-input" type="search" placeholder="输入角色名称或编号，例如 SW-026" autocomplete="off">
+        <div class="record-list" id="characters-list"></div>
+      </section>
+
+      <section class="page" id="page-world" aria-labelledby="world-title" hidden>
+        <div class="breadcrumbs">档案首页 <span>/</span> 世界与地区</div>
+        <div class="page-heading">
+          <p class="overline">WORLD ARCHIVE</p>
+          <h2 id="world-title">世界与地区</h2>
+          <p>地区和地理资料的占位目录。</p>
+        </div>
+        <div class="record-list" id="world-list"></div>
+      </section>
+
+      <section class="page" id="page-documents" aria-labelledby="documents-title" hidden>
+        <div class="breadcrumbs">档案首页 <span>/</span> 记录与文献</div>
+        <div class="page-heading">
+          <p class="overline">ARCHIVED DOCUMENTS</p>
+          <h2 id="documents-title">记录与文献</h2>
+          <p>故事、历史记录及其他文献的占位目录。</p>
+        </div>
+        <div class="record-list" id="documents-list"></div>
+      </section>
+
+      <section class="page" id="page-article" aria-labelledby="article-title" hidden>
+        <div class="breadcrumbs">档案首页 <span>/</span> <span id="article-path">档案条目</span></div>
+        <button class="back-button" type="button" id="back-button">← 返回档案列表</button>
+        <div class="article-header">
+          <p class="overline" id="article-type">ARCHIVE ENTRY</p>
+          <h2 id="article-title"></h2>
+          <p class="article-id" id="article-id"></p>
+        </div>
+        <div class="article-meta"><span>档案状态</span><strong>待完善 / DRAFT</strong></div>
+        <h3 class="article-section-title">概述</h3>
+        <p class="article-paragraph" id="article-summary"></p>
+        <h3 class="article-section-title">详细资料</h3>
+        <p class="article-paragraph">【占位符】这里以后可以补充条目的完整内容、相关文献和链接。</p>
+      </section>
+    </main>
+  </div>
+  <footer class="footer"><span>76SN · THE CHANT OF LAVENX</span><span>世界观档案站 / 版本 0.2</span></footer>
+</body>
+</html>
