@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="《76SN 踏霞之歌》世界观设定集：踏霞基础设定。">
+  <title>踏霞基础设定 | 76SN · The Chant of Lavenx</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --page: #0b0c10;
+      --surface: #15161c;
+      --line: #353249;
+      --text: #e8e8ed;
+      --muted: #a9a8b4;
+      --accent: #8074ff;
+      --song: "Songti SC", "STSong", "Noto Serif CJK SC", "SimSun", serif;
+      --sans: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--page); color: var(--text); }
+    .page-top { max-width: 1020px; margin: auto; padding: 30px 28px 0;
+      display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .back-link { color: var(--muted); text-decoration: none; font: 14px/1.5 var(--sans); }
+    .back-link:hover, .back-link:focus-visible { color: #ada3ff; text-decoration: underline; }
+    .brand { font: 800 22px/1 Arial, sans-serif; color: #e8e8ef; letter-spacing: -.03em; }
+    .rule { max-width: 964px; margin: 26px auto 0; height: 1px; background: var(--line); }
+    .lore-page { max-width: 850px; margin: 0 auto; padding: 52px 28px 110px; }
+    .eyebrow { margin: 0 0 14px; font: 600 12px/1.5 Arial, sans-serif;
+      color: var(--muted); letter-spacing: .12em; }
+    .lore-document { font-family: var(--song); font-size: 19px; line-height: 1.95;
+      letter-spacing: .015em; word-break: normal; overflow-wrap: anywhere; }
+    .lore-document h1 { font-size: clamp(32px, 5vw, 44px); line-height: 1.45;
+      letter-spacing: .035em; margin: 0 0 40px; font-weight: 700; }
+    .lore-document h2 { margin: 58px 0 14px; padding-left: 14px;
+      border-left: 2px solid var(--accent); font-size: clamp(23px, 3vw, 28px);
+      font-weight: 700; line-height: 1.5; letter-spacing: .015em; }
+    .lore-document p { margin: 0 0 1em; text-indent: 2em; }
+    .lore-document strong { font-weight: 700; }
+    .lore-document .poem-subtitle { margin: 0 0 16px; text-align: right; text-indent: 0;
+      color: #c9c9d0; font-size: 17px; }
+    .creation-poem { padding: 0 0 0 16px; margin: 0 0 48px 0; border-left: 2px solid #727182; }
+    .creation-poem p { text-indent: 0; line-height: 1.65; margin: 0; }
+    .lore-document h2:first-of-type { margin-top: 8px; }
+    .toc { margin: 22px 0 50px; border: 1px solid var(--line); background: var(--surface);
+      padding: 14px 18px; font-family: var(--sans); }
+    .toc summary { cursor: pointer; font-size: 14px; color: #d6d5df; }
+    .toc-items { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 14px; }
+    .toc-items a { text-decoration: none; color: #a5a0ff; font-size: 13px; }
+    .toc-items a:hover { text-decoration: underline; }
+    .endmark { margin-top: 80px; text-align: center; color: #777988;
+      font: 12px/1.8 Georgia, serif; letter-spacing: .12em; }
+    @media (max-width: 620px) {
+      .page-top { padding: 20px 18px 0; }
+      .rule { margin: 22px 18px 0; }
+      .lore-page { padding: 36px 20px 70px; }
+      .lore-document { font-size: 17px; line-height: 1.9; }
+      .lore-document h1 { margin-bottom: 30px; }
+      .lore-document h2 { margin-top: 45px; }
+      .lore-document .poem-subtitle { font-size: 14px; }
+      .creation-poem { padding-left: 10px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <header class="page-top">
+    <a class="back-link" href="../index.html#lore" id="return-link">← 返回世界设定</a>
+    <span class="brand">76SN</span>
+  </header>
+  <div class="rule" aria-hidden="true"></div>
+  <main class="lore-page">
+    <p class="eyebrow">THE CHANT OF LAVENX / WORLD LORE</p>
+    <article class="lore-document">
+      <h1>踏霞基础设定</h1>
+      <details class="toc"><summary>章节目录 / CONTENTS</summary>
+        <nav class="toc-items" aria-label="章节跳转">
+          <a href="#creation-song">创世诗</a>
+          <a href="#elementies">霞藓</a>
+          <a href="#scattered">游离霞藓</a>
+          <a href="#primordial">起源霞藓</a>
+          <a href="#crafted">淬炼霞藓</a>
+          <a href="#visibility">霞藓的显露和隐匿</a>
+          <a href="#refinery">霞藓技艺</a>
+          <a href="#elementoner">承载体</a>
+          <a href="#mortality">死亡和永生</a>
+          <a href="#immortals">至高物</a>
+          <a href="#mater">母神</a>
+          <a href="#laws">界序</a>
+          <a href="#eschatoner">终焉裁手</a>
+          <a href="#lawwalkers">界序使</a>
+        </nav>
+      </details>
+      <h2 id="creation-song">初生之地的歌</h2>
+      <p class="poem-subtitle">———踏霞世界的创世诗</p>
+      <div class="creation-poem" role="group" aria-label="踏霞世界的创世诗"><p>母亲产下了孩子，</p><p>孩子走过的地方长出红色的茸藓；</p><p>黑色的血液灌满大地，</p><p>大地呕吐着，</p><p>于是，</p><p>苍穹有了心跳。</p><p>苍穹亲吻母亲和孩子，</p><p>环抱整个世界。</p><p>孩子的眼泪滴在苍穹的胸口，</p><p>月光捅破苍穹的翅膀。</p><p>母亲的乳汁顺着孩子的肌肤滚落在地上，</p><p>是大海。</p><p>大海咬断黑色的脐带，白血外溢。</p><p>世界在白色的血中凝结起来。</p><p>苍穹进入梦乡，</p><p>同孩子、母亲、月亮和大海一起。</p><p>我们的心跳随大海，</p><p>潮起潮落。</p></div>
+      <h2 id="elementies">霞藓</h2>
+      <p>踏霞世界的独特之处便是其无处不在的超自然现象。这些超自然的存在都源于名为<strong>霞藓（Elementies）</strong>的能量源。</p>
+      <p>霞藓的能量是踏霞世界予子民的礼物，它们取之不尽、用之不竭，蕴藏在万事万物之中。虽然可以实体化，霞藓一般以一种不可视但是可以感知的能量流状态出现。</p>
+      <h2 id="scattered">游离霞藓 Scattered Elementies</h2>
+      <p>大部分的霞藓都是自由随意分布在世界角落中的。这种霞藓被称为“游离霞藓”。它们可以隐藏在万物之中，不受控制地以混乱状态散布，在使用一定的霞藓技艺情况下才能提炼和使用。在一些游离霞藓浓度高的地方，它们可能会实体化成“<strong>至高物</strong>”。</p>
+      <h2 id="primordial">起源霞藓 Primordial Elementies</h2>
+      <p>万物的灵魂都是霞藓凝聚成的。是否有灵魂决定了一个实体是否有意识。这种作为起源存在的霞藓被称为“起源霞藓”，作为构成灵魂的唯一原料。</p>
+      <p>起源霞藓是一种存在于游离霞藓海洋中的特殊游离霞藓，也可以理解为一种灵魂原质。它们拥有基础潜意识和倾向性（如亲近海洋、火焰等自然元素或者某种概念），但是没有具体的记忆、人格或者明确的自我意识。</p>
+      <p>当一个新的生命开始诞生时，该生命体会自然散发出一种固定频率的波，此时起源霞藓会被这种频率吸引产生<strong>共振（The Resonance）</strong>，主动融入这个新生的躯壳，并在生长过程中收到外界的刺激和躯壳本身的特性影响而逐渐形成自我意识，这就是赋予灵魂的过程。</p>
+      <h2 id="crafted">淬炼霞藓 Crafted Elementies</h2>
+      <p>被拥有者提取使用的霞藓被称为“淬炼霞藓”。顾名思义，淬炼霞藓是游离霞藓经历过内化之后释放出来的能量束，可以凝聚成可视可感的物质进行输出。这就是“魔法”！</p>
+      <h2 id="visibility">霞藓的显露和隐匿</h2>
+      <p>然而一片区域对于霞藓理解程度的差异会影响霞藓在该区域的密度和显现程度。霞藓理解程度越高的地区，如宗教信仰浓厚的地带，游离霞藓引起的的超自然现象会更加频繁的暴露在公众视野中；霞藓理解程度低的地区，如依赖科技发展大于霞藓技艺的地区，超自然现象则更惯于隐匿。</p>
+      <h2 id="refinery">霞藓技艺 Refinery of Elementies</h2>
+      <p>霞藓技艺即对于霞藓能量的掌握程度。</p>
+      <p>当个体对于霞藓的理解和技艺掌握更加高超的时候，其可以输出的淬炼霞藓也就更加强大。因为个体灵魂的独一无二性，每个人擅长运用的霞藓技艺品种也有所不同。</p>
+      <p>然而，由于很多人根本不知道霞藓的存在，也不知道自己身体里灵魂蕴含的潜力。这种信息差导致有些地区大多数人都无法运用霞藓技艺。霞藓技艺的原料是取之不尽的游离霞藓，因此理论上霞藓技艺的强度也是没有上限的。</p>
+      <h2 id="elementoner">承载体 Elementoner</h2>
+      <p>承载体是储存霞藓的容器，它们是自然形成的物质，材料有许多，大部分是矿物质晶体、岩石和金属，也有少量的液体或者有机承载体，如部分地区的千年古木。它们的作用可以理解为一种导体或者电源，将淬炼霞藓进行短暂储存或者更加集中地输出。</p>
+      <p>承载体往往拥有凝聚霞藓能量的特性，不同品质的承载体也会对特定的霞藓有特定的共鸣和强化特点。基于这一性质，很多霞藓技艺使用者会将这些承载体打造成霞藓武器辅助霞藓技艺的输出。这些武器中就包括拉雯科斯家族的名刀『鹊尾升』和赛普轮塔的『Sep-001干将莫邪』</p>
+      <h2 id="mortality">死亡和永生</h2>
+      <p>当一个生命体死亡的时候，意味着该生命躯壳已经枯竭，原本具有独特性质、构成灵魂的起源霞藓会逐渐失去稳定的形态，会回归到游离霞藓的状态，一切都会回到本源。然而，这也不算是一种彻底的湮灭，这些能量流仍携带着对于自我意识丝丝缕缕的微弱痕迹。这些霞藓和其他的游离霞藓重新内化和组合，等待新生命的诞生，完成了壮丽精彩的生命循环。</p>
+      <p>然而，通过霞藓技艺可以实现对于年龄轴的操控，达到趋于永恒的可能。其原理是对于霞藓技艺的精湛掌握，使用者利用精密的淬炼霞藓能量持续施展技艺，即可从底层修复甚至逆转时间带来的损伤。不仅如此，强大的技艺也能稳固躯壳和灵魂的链接，防止因躯壳的过度衰败导致灵魂解离…不管怎样，霞藓有无数秘密值得探究——你永远不知道霞藓的潜力。</p>
+      <p>当然，科技也有延年益寿的效果，例如意识克隆或者生物学上的基因调整，但是效果和本质与霞藓技艺带来的结果截然不同。</p>
+      <h2 id="immortals">至高物</h2>
+      <p><strong>至高物（The Immortals)</strong>是对于超出常人能力所及和理解范围的存在的统称，是由极其浓稠的霞藓自然凝聚成的物质。它们一般是混乱的意识的凝聚，是游离在世界不可知领域的混沌存在，无理性无道德的模糊极端物。是盲目痴愚漫步在广袤世界中的伟大巨物。至高物可以实体化。他们会用霞藓捏造自己的肉身。但是被捏造出的肉身不过是代理人，真正的至高物永远都是非礼勿视的。至高物往往通过特定的渠道为使用霞藓技艺者主动或者被动地带来霞藓能量的强化——无论是母神的寄生卵、终焉裁手的交易、奇妙的共生关系或者家族契约等多种办法。</p>
+      <p>值得注意的是，虽然认为至高物是神明的人不在少数，但至高物并非全能，甚至有极其脆弱的时候。</p>
+      <h2 id="mater">母神</h2>
+      <p><strong>母神（Mater Khaotrix）</strong>是至高物的特殊品种，有着罪恶和疯狂的本性。祂们是为数不多会主动赋予霞藓技艺强化的至高物群体。祂们的独特之处在于祂们的『子嗣』系统——母神会在游离霞藓海洋里散布一种名为“卵”的独特游离霞藓，这些“卵”会在起源霞藓形成时流入并寄生。</p>
+      <p>被“卵”寄生的起源霞藓形成的灵魂进入生命体内时会改变部分或全部基因，使其天生拥有母神赐予的部分特殊能力或者身体特征。这样的生命体被称为“子嗣”。但成为子嗣并不是什么值得庆祝的事情，反之更像是诅咒。例如他们脑中常常有残余的母神回响，以及很多子嗣因为其独特性在特定地区受到歧视。</p>
+      <h2 id="laws">界序</h2>
+      <p>字面意思，<strong>界序（Law of the Worlds）</strong>就是世界的规序。它们维持着世界的稳定，同时联通着已知地域之外的遥远领域。界序遍布在世界各地，这些界序里蕴含着高密度的游离霞藓能量，会带领你进入神秘的世界的另一端。</p>
+      <h2 id="eschatoner">终焉裁手 Eschatoner</h2>
+      <p>一种存在于界序之中的至高物。祂们有着几乎不可撼动的强大力量和震慑能力，镇守着界序的入口。部分终焉裁手因为其混沌性常常带给当地灾难，因此成为了当地人心头的顽疾。界序是充满未知且力量强大的存在，因此古往今来无数的勇者尝试去挑战终焉裁手，为了更深地窥探界序、为民除害、证明自己的实力或者与终焉裁手交易以获得更加强大的霞藓能量——然而成功和终焉裁手达成契约者屈指可数。</p>
+      <h2 id="lawwalkers">界序使 Lawwalkers</h2>
+      <p>成功和终焉裁手达成契约，可以<strong>相对</strong>自如地掌握界序力量的挑战者被称为<strong>界序使（The Lawwalkers）。</strong>界序使被终焉裁手认可，成为界序的主人，拥有超乎常人的霞藓技艺，他们的淬炼霞藓能量可以直接提取自界序周围四散的高能量游离霞藓。</p>
+      <p>然而成为界序使很明显不是件易事。一般情况下，挑战者必须接受来自界序恶劣环境和终焉裁手的艰难考验，是一场九死一生的磨练。大部分挑战者都会在挑战终焉裁手的过程中发生意外而牺牲或者提前退出捡回一条命。</p>
+      <p class="endmark">76SN · THE CHANT OF LAVENX</p>
+    </article>
+  </main>
+  <script>
+    // If opened from the world's lore directory, use browser Back to return
+    // to the exact previous screen. A direct visit retains the home fallback.
+    const back = document.getElementById('return-link');
+    back.addEventListener('click', function (e) {
+      const from = document.referrer;
+      const own = new URL('../index.html', location.href);
+      if (from && new URL(from).origin === own.origin &&
+          new URL(from).pathname === own.pathname && history.length > 1) {
+        e.preventDefault();
+        history.back();
+      }
+    });
+  </script>
+</body>
+</html>
