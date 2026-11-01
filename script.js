@@ -3,7 +3,7 @@
  // 世界观档案数据库
 
 const records = [
-//#endregion
+
 // #region CHARACTER
   {
     id: "Seprentta Seth",
