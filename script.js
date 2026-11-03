@@ -475,9 +475,20 @@ const filtered = records.filter(record =>
     body.append(id, title, summary);
     button.append(body, arrow);
 
-  button.addEventListener("click", () =>
-  openArticle(record, category || "home")
-);
+button.addEventListener("click", () => {
+  if (record.category === "characters") {
+    const slug = record.id.trim().toLowerCase()
+      .replace(/[^a-z0-9\u00c0-\u024f\u4e00-\u9fff]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+
+    window.location.href =
+      "characters/" + encodeURIComponent(slug) + ".html";
+    return;
+  }
+
+  openArticle(record, category || "home");
+});
+  
 
     container.appendChild(button);
 
@@ -562,7 +573,16 @@ document.getElementById("character-sort")
     renderList("characters", "characters-list", keyword);
   });
 
-showPage("home");
+const validPages = ["home", "characters", "world", "documents", "lore"];
+
+function showPageFromHash() {
+  const page = window.location.hash.slice(1);
+  showPage(validPages.includes(page) ? page : "home");
+}
+
+showPageFromHash();
+window.addEventListener("hashchange", showPageFromHash);
+
 
 const homeSearch = document.getElementById("home-search");
 const homeSearchPanel = document.getElementById("home-search-panel");
