@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b0c10">
+  <meta name="description" content="76SN《踏霞之歌》角色档案：塞林·布莱克伯恩（Serin Blackborne）。">
+  <title>塞林·布莱克伯恩 | 76SN · The Chant of Lavenx</title>
+  <link rel="stylesheet" href="../character.css">
+</head>
+<body>
+  <header class="page-top">
+    <a class="back-link" href="../index.html#characters" id="return-link">← 返回角色档案</a>
+    <span class="brand">76SN</span>
+  </header>
+  <div class="rule" aria-hidden="true"></div>
+
+  <main class="archive-page">
+    <article class="archive-document">
+      <p class="character-id">Serin Blackborne</p>
+      <h1>塞林·布莱克伯恩</h1>
+      <p class="character-tagline">【待补充】</p>
+    </article>
+    <p class="endmark">76SN · THE CHANT OF LAVENX</p>
+  </main>
+
+  <script>
+    // 返回从主页进入时的准确位置；直接访问此页时返回首页。
+    const back = document.getElementById("return-link");
+    back.addEventListener("click", function (event) {
+      try {
+        const previous = new URL(document.referrer);
+        const home = new URL("../index.html", location.href);
+        if (previous.origin === home.origin &&
+            (previous.pathname === home.pathname ||
+             previous.pathname === home.pathname.replace(/index\.html$/, "")) &&
+            history.length > 1) {
+          event.preventDefault();
+          history.back();
+        }
+      } catch (_) { /* 直接打开页面时使用普通链接 */ }
+    });
+  </script>
+</body>
+</html>
