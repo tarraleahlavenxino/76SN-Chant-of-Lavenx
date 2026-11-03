@@ -128,8 +128,9 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); ou
 
 /* Main reading column */
 .main-content { width: 100%; max-width: 780px; min-width: 0; }
-.breadcrumbs { color: var(--faint); font-size: 15px; margin-bottom: 27px; }
-.breadcrumbs span { margin: 0 8px; color: #5a5d67; }
+.breadcrumbs {
+  display: none;
+}
 .overline { margin: 0; font: 600 18px/1.7 Georgia, sans-serif; letter-spacing: .10em; color: var(--muted); }
 .home-intro { padding-bottom: 10px; }
 .home-intro h2 {
@@ -496,17 +497,27 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); ou
   }
 }
 
-/* 角色档案 & 世界设定：统一单栏布局 */
 
-#characters-list,
+/* =========================
+   CHARACTER ARCHIVE — TWO COLUMNS
+   ========================= */
+
+/* 角色档案双列 */
+#characters-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 18px;
+  border-top: none;
+}
+
+/* 国家、世界设定目录仍然单列 */
 .lore-list {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 8px;
 }
 
-/* 统一圆角卡片 */
-
+/* 统一卡片外观 */
 #characters-list .record-row,
 .lore-entry {
   border: 1px solid var(--line);
@@ -514,4 +525,25 @@ button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); ou
   padding: 10px 18px;
   min-width: 0;
   line-height: 1.4;
+}
+
+/* 防止英文名过长撑坏卡片 */
+#characters-list .record-row > span:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* 简介最多显示两行 */
+#characters-list .record-summary {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+/* 手机端恢复单列 */
+@media (max-width: 700px) {
+  #characters-list {
+    grid-template-columns: 1fr;
+  }
 }
